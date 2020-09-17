@@ -1,18 +1,13 @@
 <template>
   <div>
-    <v-card
-      outlined
-    >
+    <v-card outlined>
       <v-card-title>Payment Details</v-card-title>
 
       <v-card-text>
-        <p>Total: $999</p>
-        <v-btn
-          color="primary"
-          @click="goToCheckout"
-        >
-          Checkout
-        </v-btn>
+        <p>Total: ${{ total }}</p>
+        <v-text-field label="name" />
+        <v-text-field label="email" />
+        <v-btn color="primary" @click="goToCheckout">Checkout</v-btn>
       </v-card-text>
     </v-card>
   </div>
@@ -24,15 +19,16 @@ export default {
     return {
       checkoutForm: null,
       nameRules: [],
-      name: '',
+      name: "",
       emailRules: [],
-      email: ''
-    }
+      email: "",
+      total: 999,
+    };
   },
   methods: {
     goToCheckout() {
-      this.$router.push({ name: 'checkout' })
-    }
-  }
-}
+      this.$router.push({ name: "checkout" });
+    },
+  },
+};
 </script>
