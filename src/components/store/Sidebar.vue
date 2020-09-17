@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet height="300" :elevation="4" class="pa-8" tile v-if="$vuetify.breakpoint.smAndUp">
+    <v-sheet height="300" :elevation="4" class="pa-8" tile v-if="$vuetify.breakpoint.mdAndUp">
       <h3>Filters</h3>
       <v-radio-group v-model="priceFilter" :mandatory="true">
         <v-radio
